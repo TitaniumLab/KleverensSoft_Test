@@ -12,3 +12,4 @@ C:\Users\Fotis\source\repos\KleverensSoft_Test\obj\Debug\net9.0\refint\Kleverens
 C:\Users\Fotis\source\repos\KleverensSoft_Test\obj\Debug\net9.0\KleverensSoft_Test.pdb
 C:\Users\Fotis\source\repos\KleverensSoft_Test\obj\Debug\net9.0\KleverensSoft_Test.genruntimeconfig.cache
 C:\Users\Fotis\source\repos\KleverensSoft_Test\obj\Debug\net9.0\ref\KleverensSoft_Test.dll
+C:\Users\Fotis\source\repos\KleverensSoft_Test\obj\Debug\net9.0\KleverensSoft_Test.sourcelink.json
