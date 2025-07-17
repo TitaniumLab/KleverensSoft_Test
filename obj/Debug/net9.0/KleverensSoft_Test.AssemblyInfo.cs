@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KleverensSoft_Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e4dddec2c0b38860aac624e6e5c48dbb89f9a0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44241e970b7b45cccdd54c3730c3762cc1199801")]
 [assembly: System.Reflection.AssemblyProductAttribute("KleverensSoft_Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KleverensSoft_Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

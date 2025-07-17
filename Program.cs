@@ -1,9 +1,10 @@
-﻿Task1();
-Task2();
+﻿using KleverensSoft_Test;
+using System.Diagnostics;
 
 
-
-
+//Task1();
+//Task2();
+Task3();
 
 //Задача 1
 //Дана строка, содержащая n маленьких букв латинского алфавита.
@@ -49,7 +50,90 @@ string TextCompression(string text)
 }
 
 
+//Задача 2
+//Есть "сервер" в виде статического класса.
+//У него есть переменная count (тип int) и два метода, которые позволяют эту переменную читать и писать: GetCount() и AddToCount(int value).
+//К классу–"серверу" параллельно обращаются множество клиентов, которые в основном читают, но некоторые добавляют значение к count.
+//Нужно реализовать статический класс с методами  GetCount / AddToCount так, чтобы:
+//•	читатели могли читать параллельно, не блокируя друг друга;
+//•	писатели писали только последовательно и никогда одновременно;
+//•	пока писатели добавляют и пишут, читатели должны ждать окончания записи.
 void Task2()
 {
+    Console.WriteLine("Задача 2.");
+    Console.Write("Введите целое число для добавления: ");
+    string text = Console.ReadLine();
+    int value = 0;
+    while (!int.TryParse(text, out value))
+    {
+        Console.Write("Введите целое число для добавления: ");
+        text = Console.ReadLine();
+    }
+    Server.AddToCount(value);
+    int serverValue = Server.GetCount();
+    Console.WriteLine(serverValue);
+}
 
+
+void Task3()
+{
+    Console.WriteLine("Задание 3.");
+    var logConv = new LogConverter();
+    string inputFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Input logs");
+    string outputFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Output logs");
+    string normLogPath = Path.Combine(outputFolderPath, "NormalizedLog.txt");
+    string problemLogPath = Path.Combine(outputFolderPath, "problems.txt");
+    LogConverter.LogFragment[] logOrder =
+{
+        LogConverter.LogFragment.Date,
+        LogConverter.LogFragment.Time,
+        LogConverter.LogFragment.LoggingLevel,
+        LogConverter.LogFragment.CallingMethod,
+        LogConverter.LogFragment.Message
+    };
+
+
+    if (!Directory.Exists(inputFolderPath))
+    {
+        Directory.CreateDirectory(inputFolderPath);
+    }
+    if (!Directory.Exists(outputFolderPath))
+    {
+        Directory.CreateDirectory(outputFolderPath);
+    }
+    if (!File.Exists(normLogPath))
+    {
+        File.Create(normLogPath);
+    }
+    if (!File.Exists(problemLogPath))
+    {
+        File.Create(problemLogPath);
+    }
+
+    int totalLogFiles = 0;
+    int successLogLines = 0;
+    int failedLogLines = 0;
+    foreach (var filePath in Directory.GetFiles(inputFolderPath, "*.txt"))
+    {
+        using StreamReader reader = new StreamReader(filePath);
+        string line;
+        while ((line = reader.ReadLine()) != null)
+        {
+            if (logConv.TryNormalizeLog(line, logOrder, out string normalizedLog))
+            {
+                File.AppendAllText(normLogPath, normalizedLog + "\n");
+                successLogLines++;
+            }
+            else
+            {
+                File.AppendAllText(problemLogPath, line + "\n");
+                failedLogLines++;
+            }
+        }
+        totalLogFiles++;
+    }
+
+    Console.WriteLine($"Проверено {totalLogFiles} файлов-логов.");
+    Console.WriteLine($"Успешно форматировано {successLogLines} строк логов.");
+    Console.WriteLine($"Не удалось форматировать {failedLogLines} строк логов.");
 }
