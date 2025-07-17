@@ -2,6 +2,9 @@
 {
     internal static class Server
     {
+        /// <summary>
+        /// ReaderWriterLockSlim обеспечивает все необходимые условия для выполнения задания.
+        /// </summary>
         private static ReaderWriterLockSlim _rwl = new ReaderWriterLockSlim();
         private static int _count = 0;
 

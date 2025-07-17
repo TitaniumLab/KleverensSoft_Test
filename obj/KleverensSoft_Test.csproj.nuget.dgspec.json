@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fotis\\source\\repos\\KleverensSoft_Test\\KleverensSoft_Test.csproj": {}
+    "C:\\Users\\Fotis\\KleverensSoft_Test\\KleverensSoft_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fotis\\source\\repos\\KleverensSoft_Test\\KleverensSoft_Test.csproj": {
+    "C:\\Users\\Fotis\\KleverensSoft_Test\\KleverensSoft_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fotis\\source\\repos\\KleverensSoft_Test\\KleverensSoft_Test.csproj",
+        "projectUniqueName": "C:\\Users\\Fotis\\KleverensSoft_Test\\KleverensSoft_Test.csproj",
         "projectName": "KleverensSoft_Test",
-        "projectPath": "C:\\Users\\Fotis\\source\\repos\\KleverensSoft_Test\\KleverensSoft_Test.csproj",
+        "projectPath": "C:\\Users\\Fotis\\KleverensSoft_Test\\KleverensSoft_Test.csproj",
         "packagesPath": "C:\\Users\\Fotis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fotis\\source\\repos\\KleverensSoft_Test\\obj\\",
+        "outputPath": "C:\\Users\\Fotis\\KleverensSoft_Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
